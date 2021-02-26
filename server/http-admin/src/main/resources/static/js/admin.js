@@ -1,7 +1,7 @@
 var app = angular.module('app', ['ng-admin']);
 app.config(['NgAdminConfigurationProvider', function (nga) {
     // create an admin application
-    var admin = nga.application('Blynk Administration', false)
+    var admin = nga.application('Blynk Administration - Powered Server by VNNIB.COM', false)
         .baseApiUrl(location.protocol + '//' + window.location.hostname + (location.port == 80 ? '' : (':' + location.port)) + location.pathname + '/'); // main API endpoint
     // create a user entity
     // the API endpoint for this entity will be 'http://jsonplaceholder.typicode.com/users/:id

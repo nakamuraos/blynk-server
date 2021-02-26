@@ -78,8 +78,8 @@ public class ResetPasswordHttpLogic extends BaseHttpHandler {
 
         String host = holder.props.host;
 
-        //using https for private servers as they have valid certificates.
-        String protocol = host.endsWith(".blynk.cc") ? "https://" : "http://";
+        // using https for private servers as they have valid certificates.
+        String protocol = host.endsWith(".vnnib.com") ? "https://" : "http://";
         this.resetPassUrl = protocol + host + "/landing?token=";
         this.pageContent = holder.textHolder.resetPassLandingTemplate;
         this.blockingIOProcessor = holder.blockingIOProcessor;

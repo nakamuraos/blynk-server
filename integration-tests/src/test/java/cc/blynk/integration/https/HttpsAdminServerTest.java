@@ -146,7 +146,7 @@ public class HttpsAdminServerTest extends BaseTest {
         try (CloseableHttpResponse response = httpclient.execute(loadAdminPage)) {
             assertEquals(200, response.getStatusLine().getStatusCode());
             String adminPage = TestUtil.consumeText(response);
-            assertTrue(adminPage.contains("Blynk Administration"));
+            assertTrue(adminPage.contains("Blynk Administration - Powered Server by VNNIB.COM"));
             assertTrue(adminPage.contains("admin.js"));
         }
     }

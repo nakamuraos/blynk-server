@@ -21,7 +21,9 @@ import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -131,7 +133,7 @@ public class HttpResetPassTest extends BaseTest {
 
     @Test
     public void getRestorePageXss3() throws Exception {
-        String token = "a".repeat(63) + "/";
+        String token = String.join("", Collections.nCopies(63, "a")) + "/";
         HttpGet getRestorePage = new HttpGet(httpServerUrl + "/restore?token=" + token);
 
         try (CloseableHttpResponse response = httpclient.execute(getRestorePage)) {

@@ -210,7 +210,7 @@ public class Holder {
         );
         this.reportScheduler = new ReportScheduler(1, downloadUrl, mailWrapper, reportingDiskDao, userDao.users);
 
-        this.sslContextHolder = new SslContextHolder(props, "test@blynk.cc");
+        this.sslContextHolder = new SslContextHolder(props, "test@blynk.vnnib.com");
         this.tokensPool = new TokensPool(serverProperties.getReportingFolder());
 
     }

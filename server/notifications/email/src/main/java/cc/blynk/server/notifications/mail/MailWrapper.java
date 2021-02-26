@@ -20,7 +20,10 @@ public class MailWrapper {
         if (host != null) {
             mailProperties.put("mail.smtp.ssl.trust", host);
         }
-        if (host != null && (host.endsWith("sparkpostmail.com") || host.endsWith("amazonaws.com"))) {
+        if (host != null
+                && (!host.endsWith("gmail.com")
+                    || host.endsWith("sparkpostmail.com")
+                    || host.endsWith("amazonaws.com"))) {
             // Amazon AWS Simple Email Service uses an account (mail.from) distinct from the username,
             // which is just like SparkPost.
             client = new ThirdPartyMailClient(mailProperties, productName);

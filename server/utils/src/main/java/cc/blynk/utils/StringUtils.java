@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  */
 public final class StringUtils {
 
-    public final static String BLYNK_LANDING = "https://www.blynk.cc";
+    public final static String BLYNK_LANDING = "https://blynk.vnnib.com";
 
     public static final char BODY_SEPARATOR = '\0';
     public static final String BODY_SEPARATOR_STRING = String.valueOf(BODY_SEPARATOR);

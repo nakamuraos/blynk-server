@@ -120,7 +120,7 @@ public final class ServerLauncher {
     private static void createSuperUser(Holder holder) {
         ServerProperties props = holder.props;
         String url = props.getAdminUrl(props.host);
-        String email = props.getProperty("admin.email", "admin@blynk.cc");
+        String email = props.getProperty("admin.email", "admin@blynk.vnnib.com");
         String pass = props.getProperty("admin.pass");
 
         if (!holder.userDao.isSuperAdminExists()) {
